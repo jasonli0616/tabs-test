@@ -1,26 +1,13 @@
-var winIsActive = false;
+var winIsActive = true;
 var timesSwitched = 0;
+var p = document.getElementById('p');
 
-timer = setInterval(function() {
-    check();
-}, 900);
+function inactive() {
+    winIsActive = false;
+    timesSwitched += 1;
+}
 
-
-function check() {
-    if (winIsActive) {
-        winIsActive = false;
-        timesSwitched += 1;
-        window.addEventListener('blur', function() {
-            let p = document.getElementById('p');
-        });
-    }
-    
-    else {
-        winIsActive = true;
-        window.addEventListener('focus', function() {
-            let p = document.getElementById('p');
-            p.innerHTML = `<br>You switched to a different tab ${timesSwitched} times`;
-        });
-    }
-    
+function active() {
+    winIsActive = true;
+    p.innerHTML = `<br>You switched to a different tab ${timesSwitched} times`;
 }
