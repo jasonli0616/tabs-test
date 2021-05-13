@@ -18,3 +18,20 @@ h1 {
 	text-align: center;
 	top: 90%;
 }
+
+button {
+	font-size: 14px;
+	text-decoration: none;
+	color: white;
+	background: rgb(48, 48, 48);
+	width: 90px;
+	padding: 8px;
+	border: 1px solid white;
+	transition: 0.3s all;
+	cursor: pointer;
+}
+
+button:hover {
+	background: white;
+	color: black;
+}
