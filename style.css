@@ -35,3 +35,7 @@ button:hover {
 	background: white;
 	color: black;
 }
+
+#mobileText {
+	visibility: hidden;
+}
